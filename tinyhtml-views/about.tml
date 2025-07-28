@@ -1,0 +1,23 @@
+!DOCTYPE html
+html[lang="en"]:
+  head:
+    meta[charset="UTF-8"]
+    title: "About - TinyHTML Project"
+  body:
+    div.container:
+      h1: "About"
+      p: "This is the about page."
+      a[href="index.html"]: "Back to Home"
+  footer:
+    p: "© 2025 Your Company"
+    ul: 
+      li: "Home"
+      li: "Products"
+      li: "Services"
+      li: "About"
+      li: "Contact"
+    form[action="/submit"][method="POST"]:
+      label[for="input-id"]: "Label"
+      input[id="input-id"][name="input-name"][type="text"]
+      button[type="submit"]: "Submit"
+      

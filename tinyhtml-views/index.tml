@@ -1,0 +1,101 @@
+!DOCTYPE html
+html[lang="en"]:
+  head:
+    meta[charset="UTF-8"]
+    meta[name="viewport"][content="width=device-width, initial-scale=1.0"]
+    title: "Example Page"
+    link[rel="stylesheet"][href="/styles.css"]
+    style: |
+      body { font-family: Arial; }
+      .hidden { display: none; }
+    script[defer][src="/main.js"]
+  body.main-container#home-page[data-theme="dark"]:
+    header.top-bar[onclick="alert('Header clicked!')"]:
+      h1.site-title: "Welcome to My Site"
+      p.tagline: "The best place for examples."
+    nav.main-menu:
+      ul:
+        li.active: "Home"
+        li: "About"
+        li: "Contact"
+    main.content-area:
+      section.intro-section#intro:
+        h2: "Introduction"
+        p: "This is a paragraph with some text and a line break below."
+        br
+        span.highlight[style="color:red"]: "Highlighted!"
+      section.form-section:
+        form[action="/submit"][method="POST"]:
+          label[for="username"]: "Username"
+          input#username.input-field[type="text"][name="username"][required]
+          label[for="password"]: "Password"
+          input#password.input-field[type="password"][name="password"]
+          label[for="country"]: "Country"
+          select#country[name="country"]:
+            option[value=""]: "Choose"
+            option[value="fr"]: "France"
+            option[value="ma"][selected]: "Morocco"
+            option[value="us"]: "USA"
+          label[for="bio"]: "Bio"
+          textarea#bio[name="bio"][rows="4"][cols="40"]: "Write here..."
+          fieldset:
+            legend: "Preferences"
+            label:
+              input[type="checkbox"][name="subscribe"][checked]
+              | " Subscribe to newsletter"
+            label:
+              input[type="radio"][name="gender"][value="male"]
+              | " Male"
+            label:
+              input[type="radio"][name="gender"][value="female"]
+              | " Female"
+          button.btn-submit[type="submit"][onclick="console.log('submitted')"]: "Send"
+    aside.sidebar:
+      h3: "News"
+      ul.news-list:
+        li: "Update 1"
+        li: "Update 2"
+        li: "Update 3"
+    section.gallery:
+      h2: "Image Gallery"
+      div.gallery-item:
+        img[src="/images/photo1.jpg"][alt="A photo"][width="200"]
+        figcaption: "Photo 1"
+      div.gallery-item:
+        img[src="/images/photo2.jpg"][alt="Another photo"]
+        figcaption: "Photo 2"
+    section.video-player:
+      video[controls][width="320"][height="240"]:
+        source[src="/video.mp4"][type="video/mp4"]
+        source[src="/video.ogg"][type="video/ogg"]
+        | "Your browser does not support the video tag."
+    section.audio-player:
+      audio[controls]:
+        source[src="/audio.mp3"][type="audio/mpeg"]
+        source[src="/audio.ogg"][type="audio/ogg"]
+        | "Your browser does not support the audio tag."
+    section.table-section:
+      table.data-table:
+        thead:
+          tr:
+            th: "Name"
+            th: "Age"
+            th: "Country"
+        tbody:
+          tr:
+            td: "Alice"
+            td: "25"
+            td: "France"
+          tr:
+            td: "Omar"
+            td: "30"
+            td: "Morocco"
+    footer.site-footer:
+      p: "© 2025 My Company"
+      a[href="/terms"][target="_blank"]: "Terms of Service"
+      script: |
+        console.log('Page loaded');
+        function hideModal() {
+          this.innerHTML = '<button>Click me as a test</button>';
+          return true;
+        }

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example Page</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      body {
+        font-family: Arial;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+    <script defer src="/main.js"></script>
+  </head>
+  <body class="main-container" id="home-page" data-theme="dark">
+    <header class="top-bar" onclick="alert('Header clicked!')">
+      <h1 class="site-title">Welcome to My Site</h1>
+      <p class="tagline">The best place for examples.</p>
+    </header>
+    <nav class="main-menu">
+      <ul>
+        <li class="active">Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <main class="content-area">
+      <section class="intro-section" id="intro">
+        <h2>Introduction</h2>
+        <p>This is a paragraph with some text and a line break below.</p>
+        <br />
+        <span class="highlight" style="color: red">Highlighted!</span>
+      </section>
+      <section class="form-section">
+        <form action="/submit" method="POST">
+          <label for="username">Username</label>
+          <input id="username" />
+          <label for="password">Password</label>
+          <input id="password" />
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="">Choose</option>
+            <option value="fr">France</option>
+            <option value="ma" selected>Morocco</option>
+            <option value="us">USA</option>
+          </select>
+          <label for="bio">Bio</label>
+          <textarea id="bio" name="bio" rows="4" cols="40">
+Write here...</textarea
+          >
+          <fieldset>
+            <legend>Preferences</legend>
+            <label>
+              <input type="checkbox" name="subscribe" checked />
+              Subscribe to newsletter
+            </label>
+            <label>
+              <input type="radio" name="gender" value="male" />
+              Male
+            </label>
+            <label>
+              <input type="radio" name="gender" value="female" />
+              Female
+            </label>
+          </fieldset>
+          <button
+            class="btn-submit"
+            type="submit"
+            onclick="console.log('submitted')"
+          >
+            Send
+          </button>
+        </form>
+      </section>
+    </main>
+    <aside class="sidebar">
+      <h3>News</h3>
+      <ul class="news-list">
+        <li>Update 1</li>
+        <li>Update 2</li>
+        <li>Update 3</li>
+      </ul>
+    </aside>
+    <section class="gallery">
+      <h2>Image Gallery</h2>
+      <div class="gallery-item">
+        <img src="/images/photo1.jpg" alt="A photo" width="200" />
+        <figcaption>Photo 1</figcaption>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo2.jpg" alt="Another photo" />
+        <figcaption>Photo 2</figcaption>
+      </div>
+    </section>
+    <section class="video-player">
+      <video controls width="320" height="240">
+        <source src="/video.mp4" type="video/mp4" />
+        <source src="/video.ogg" type="video/ogg" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+    <section class="audio-player">
+      <audio controls>
+        <source src="/audio.mp3" type="audio/mpeg" />
+        <source src="/audio.ogg" type="audio/ogg" />
+        Your browser does not support the audio tag.
+      </audio>
+    </section>
+    <section class="table-section">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Country</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alice</td>
+            <td>25</td>
+            <td>France</td>
+          </tr>
+          <tr>
+            <td>Omar</td>
+            <td>30</td>
+            <td>Morocco</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <footer class="site-footer">
+      <p>© 2025 My Company</p>
+      <a href="/terms" target="_blank">Terms of Service</a>
+      <script>
+        console.log("Page loaded");
+        function hideModal() {
+          this.innerHTML = "<button>Click me as a test</button>";
+          return true;
+        }
+      </script>
+    </footer>
+  </body>
+</html>

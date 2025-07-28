@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complex TinyHTML Test File</title>
+    <style type="text/css">
+      /* CSS with special characters & symbols */
+      body {
+        font-family: "Comic Sans MS", "Arial Black", sans-serif;
+        background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+        margin: 0;
+        padding: 20px;
+      }
+      .special-chars::before {
+        content: "★ ♠ ♥ ♦ ♣ → ← ↑ ↓ ⚡ ⚠ ✓ ✗ & < > ' \" \\";
+      }
+      @media (max-width: 768px) {
+        .responsive {
+          display: none !important;
+        }
+      }
+      /* Unicode and emoji in CSS */
+      .emoji::after {
+        content: "🚀 🎉 💻 🔥 ⭐ 🌟";
+      }
+    </style>
+  </head>
+  <body
+    class="main-body"
+    id="app"
+    data-version="1.2.3"
+    custom-attr
+    data-test="value with spaces"
+  >
+    // This is a comment line that should be treated as text
+    <header
+      class="site-header"
+      id="main-header"
+      role="banner"
+      aria-label="Main navigation"
+    >
+      <nav class="navbar navbar-expand-lg" data-bs-toggle="collapse">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" title="Home Page"
+            >Logo &amp; Brand™</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-target="#navbarNav"
+            aria-expanded="false"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#home" aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  >Products &amp; Services</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="/product1"
+                      >Product #1 (New!)</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/product2"
+                      >Product &quot;Special Edition&quot;</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/contact">Contact Us</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="main-content" id="content" role="main">
+      // Section with complex text content
+      <section class="hero-section bg-primary" data-aos="fade-up">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <h1 class="display-4 fw-bold">
+                Welcome to Our Amazing Platform! Experience the &lt;future&gt;
+                of web development With symbols: &amp; &lt; &gt; &quot; ' \ / |
+                * ? : ; , . ! @ # $ % ^ &amp; * ( ) - _ + = { } [ ]
+              </h1>
+              <p class="lead text-muted">
+                This is a multi-line paragraph that contains various special
+                characters and symbols that might break parsers: Mathematical
+                symbols: ± × ÷ ∞ √ ∑ ∏ ∫ ∆ Currency: $ € £ ¥ ₹ ₽ ₿ Punctuation:
+                &quot;&quot;''„‚«»‹›…–— Arrows: ← → ↑ ↓ ↔ ↕ ⇐ ⇒ ⇔ And even
+                some code snippets: if (x &lt; 5 &amp;&amp; y &gt; 10) { return
+                &quot;success&quot;; }
+              </p>
+              <div class="btn-group" role="group">
+                <button
+                  class="btn btn-primary btn-lg"
+                  type="button"
+                  onclick="alert('Hello &amp; Welcome!');"
+                >
+                  Get Started
+                </button>
+                <button class="btn btn-outline-secondary btn-lg" type="button">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        // Nested complex structure with mixed content
+        <div class="features-grid">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="feature-card h-100" data-feature="security">
+                <div class="card-body">
+                  <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                  <h3 class="card-title">🔒 Security &amp; Privacy</h3>
+                  <p class="card-text">
+                    Your data is encrypted with AES-256 encryption. We follow
+                    GDPR, CCPA &amp; SOC 2 compliance standards. Special chars
+                    in content: &lt;script&gt;alert(&quot;XSS
+                    test&quot;)&lt;/script&gt;
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="feature-card h-100" data-feature="performance">
+                <div class="card-body">
+                  <i class="fas fa-rocket fa-3x text-success mb-3"></i>
+                  <h3 class="card-title">⚡ Performance &amp; Speed</h3>
+                  <p class="card-text">
+                    Lightning fast with 99.9% uptime guarantee. Optimized for
+                    mobile &amp; desktop experiences. Load times under 200ms
+                    worldwide.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="feature-card h-100" data-feature="support">
+                <div class="card-body">
+                  <i class="fas fa-headset fa-3x text-info mb-3"></i>
+                  <h3 class="card-title">🎧 24/7 Support</h3>
+                  <p class="card-text">Our team is here to help you succeed!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      // Form section with complex inputs
+      <section class="contact-section py-5" id="contact" data-bg="gradient">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <h2 class="text-center mb-5">📧 Contact Form with Edge Cases</h2>
+              <form
+                class="contact-form"
+                action="/submit"
+                method="POST"
+                enctype="multipart/form-data"
+                novalidate
+              >
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="firstName"
+                      >First Name *</label
+                    >
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      required
+                      placeholder="Enter your first name"
+                      pattern="[A-Za-z]+"
+                      title="Only letters allowed"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="lastName">Last Name *</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      required
+                      placeholder="Enter your last name"
+                    />
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="email"
+                      >Email Address *</label
+                    >
+                    <input
+                      class="form-control"
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      placeholder="user@example.com"
+                      autocomplete="email"
+                    />
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="subject">Subject</label>
+                    <select
+                      class="form-select"
+                      id="subject"
+                      name="subject"
+                      required
+                    >
+                      <option value="" disabled selected>
+                        Choose a subject...
+                      </option>
+                      <option value="general">General Inquiry</option>
+                      <option value="support">Technical Support</option>
+                      <option value="billing">Billing &amp; Payments</option>
+                      <option value="bug">Bug Report (Critical!)</option>
+                      <option value="feature">Feature Request</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="message">Message *</label>
+                    <textarea
+                      class="form-control"
+                      id="message"
+                      name="message"
+                      rows="5"
+                      required
+                      placeholder="Enter your message here..."
+                    >
+                      Default message with special characters:
+                      &quot;Hello &amp; welcome to our platform!&quot;
+                      We support UTF-8: 你好, Здравствуй, مرحبا, Hello! 🌍
+                      Test symbols: @#$%^&amp;*()_+-={}[]|;':&quot;,./&lt;&gt;?
+                    </textarea>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="newsletter"
+                        name="newsletter"
+                        value="yes"
+                        checked
+                      />
+                      <label class="form-check-label" for="newsletter"
+                        >Subscribe to our newsletter &amp; updates</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="terms"
+                        name="terms"
+                        required
+                      />
+                      <label class="form-check-label" for="terms"
+                        >I agree to the Terms &amp; Conditions *</label
+                      >
+                    </div>
+                  </div>
+                  <div class="col-12 text-center">
+                    <button
+                      class="btn btn-success btn-lg"
+                      type="submit"
+                      disabled
+                    >
+                      📤 Send Message
+                    </button>
+                    <button class="btn btn-secondary btn-lg ms-2" type="reset">
+                      🔄 Reset Form
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      // JavaScript testing section
+      <section class="code-section py-5 bg-light">
+        <div class="container">
+          <h2 class="text-center mb-4">💻 Code Examples &amp; Edge Cases</h2>
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <h4>HTML Code Sample</h4>
+              <pre class="code-block bg-dark text-light p-3 rounded">
+                <code class="language-html">
+                  &amp;lt;!DOCTYPE html&amp;gt;
+                  &amp;lt;html lang=&quot;en&quot;&amp;gt;
+                  &amp;lt;head&amp;gt;
+                  &amp;lt;title&amp;gt;Sample &amp;amp; Test&amp;lt;/title&amp;gt;
+                  &amp;lt;/head&amp;gt;
+                  &amp;lt;body&amp;gt;
+                  &amp;lt;p&amp;gt;Hello &quot;World&quot; &amp;amp; 'Universe'!&amp;lt;/p&amp;gt;
+                  &amp;lt;/body&amp;gt;
+                  &amp;lt;/html&amp;gt;
+                </code>
+              </pre>
+            </div>
+            <div class="col-lg-6">
+              <h4>CSS Code Sample</h4>
+              <pre class="code-block bg-dark text-light p-3 rounded">
+                <code class="language-css">
+                  /* Special characters in CSS */
+                  .test::before {
+                  content: &quot;★ &amp; &lt; &gt; ' \&quot; \\ / | ? * + ( ) [ ] { }&quot;;
+                  }
+                  @media (max-width: 768px) {
+                  .responsive { display: none !important; }
+                  }
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </section>
+      // Table with complex data
+      <section class="data-section py-5">
+        <div class="container">
+          <h2 class="text-center mb-4">
+            📊 Data Table with Special Characters
+          </h2>
+          <div class="table-responsive">
+            <table class="table table-striped table-hover" data-sortable="true">
+              <thead class="table-dark">
+                <tr>
+                  <th scope="col" data-sort="string">ID #</th>
+                  <th scope="col" data-sort="string">Name &amp; Title</th>
+                  <th scope="col" data-sort="number">Price ($)</th>
+                  <th scope="col" data-sort="string">Status</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-id="001">
+                  <td>#001</td>
+                  <td>Product &quot;Alpha&quot; &amp; Beta™</td>
+                  <td>$1,234.56</td>
+                  <td>
+                    <span class="badge bg-success">✓ Active</span>
+                  </td>
+                  <td>
+                    <button
+                      class="btn btn-sm btn-primary"
+                      onclick='editItem("001")'
+                    >
+                      Edit
+                    </button>
+                    <button
+                      class="btn btn-sm btn-danger ms-1"
+                      onclick='deleteItem("001")'
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+                <tr data-id="002">
+                  <td>#002</td>
+                  <td>Service &lt;Premium&gt; Edition</td>
+                  <td>$2,999.99</td>
+                  <td>
+                    <span class="badge bg-warning">⚠ Pending</span>
+                  </td>
+                  <td>
+                    <button
+                      class="btn btn-sm btn-primary"
+                      onclick='editItem("002")'
+                    >
+                      Edit
+                    </button>
+                    <button
+                      class="btn btn-sm btn-danger ms-1"
+                      onclick='deleteItem("002")'
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+                <tr data-id="003">
+                  <td>#003</td>
+                  <td>Package 'Ultimate' &amp; More</td>
+                  <td>$5,000.00</td>
+                  <td>
+                    <span class="badge bg-danger">✗ Inactive</span>
+                  </td>
+                  <td>
+                    <button
+                      class="btn btn-sm btn-primary"
+                      onclick='editItem("003")'
+                    >
+                      Edit
+                    </button>
+                    <button
+                      class="btn btn-sm btn-danger ms-1"
+                      onclick='deleteItem("003")'
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+    // Complex script section with edge cases
+    <script type="text/javascript">
+      // JavaScript with special characters and edge cases
+      console.log("Script loaded successfully! 🚀");
+      // Variables with special chars
+      const specialChars = "!@#$%^&*()_+-={}[]|;':\",./<>?";
+      const unicodeText =
+        "Unicode test: 你好世界 🌍 Здравствуй мир 🇷🇺 مرحبا بالعالم 🌏";
+      const htmlEntities =
+        "&lt;div&gt;Test &amp; 'quotes' &quot;double&quot;&lt;/div&gt;";
+      // Functions with complex logic
+      function processData(input) {
+        if (input && input.length > 0) {
+          return input.replace(/[<>&"']/g, function (match) {
+            switch (match) {
+              case "<":
+                return "&lt;";
+              case ">":
+                return "&gt;";
+              case "&":
+                return "&amp;";
+              case '"':
+                return "&quot;";
+              case "'":
+                return "&#39;";
+              default:
+                return match;
+            }
+          });
+        }
+        return "";
+      }
+      // Event handlers
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("DOM loaded with special chars: & < > \" ' \\");
+        // Form validation
+        const form = document.querySelector(".contact-form");
+        if (form) {
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("Form submitted with data containing: & < > \" ' symbols!");
+          });
+        }
+        // Dynamic content
+        const dynamicHTML = `
+      <div class="dynamic">
+      <p>Generated content with "quotes" & 'apostrophes'</p>
+      <span>Math: 2 < 5 && 10 > 3</span>
+      </div>
+      `;
+        console.log("Dynamic HTML:", dynamicHTML);
+      });
+      // AJAX example with special characters
+      async function fetchData() {
+        try {
+          const response = await fetch("/api/data", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: "Bearer token_with_special_chars_&<>\"'",
+            },
+            body: JSON.stringify({
+              query: "SELECT * FROM users WHERE name LIKE '%test & sample%'",
+              filters: {
+                status: "active & verified",
+                category: "premium & enterprise",
+              },
+            }),
+          });
+          if (response.ok) {
+            const data = await response.json();
+            console.log("Data received:", data);
+          }
+        } catch (error) {
+          console.error("Error occurred:", error.message);
+        }
+      }
+      // Regular expressions with special chars
+      const patterns = {
+        email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+        specialChars: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/,
+        htmlTags: /<[^>]*>/g,
+        quotes: /["'`]/g,
+      };
+      // Test different quote styles
+      const singleQuoted =
+        'This is a single quoted string with "double quotes" inside';
+      const doubleQuoted =
+        "This is a double quoted string with 'single quotes' inside";
+      const templateLiteral = `This is a template literal with ${singleQuoted} and ${doubleQuoted}`;
+      console.log(
+        "Quote tests passed:",
+        singleQuoted,
+        doubleQuoted,
+        templateLiteral,
+      );
+    </script>
+    // Footer with complex nested structure
+    <footer class="site-footer bg-dark text-light py-5" role="contentinfo">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-title">🏢 Company &amp; Info</h5>
+            <ul class="footer-links list-unstyled">
+              <li>
+                <a href="/about" title="About Us">About Us &amp; Our Mission</a>
+              </li>
+              <li>
+                <a href="/team" title="Our Team">Team &amp; Leadership</a>
+              </li>
+              <li>
+                <a href="/careers" title="Careers"
+                  >Careers &amp; Opportunities</a
+                >
+              </li>
+              <li>
+                <a href="/press" title="Press">Press &amp; Media Kit</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-title">📞 Contact &amp; Support</h5>
+            <address class="footer-address">
+              123 Main Street, Suite #456
+              <br />
+              City, State 12345-6789
+              <br />
+              Phone: +1 (555) 123-4567
+              <br />
+              Email:
+              <a href="mailto:info@example.com" title="Send us an email"
+                >info@example.com</a
+              >
+            </address>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-title">🔗 Quick Links</h5>
+            <ul class="footer-links list-unstyled">
+              <li>
+                <a href="/privacy" title="Privacy Policy"
+                  >Privacy Policy &amp; GDPR</a
+                >
+              </li>
+              <li>
+                <a href="/terms" title="Terms of Service"
+                  >Terms &amp; Conditions</a
+                >
+              </li>
+              <li>
+                <a href="/cookies" title="Cookie Policy">Cookie Policy</a>
+              </li>
+              <li>
+                <a href="/accessibility" title="Accessibility"
+                  >Accessibility Statement</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-title">📱 Follow Us</h5>
+            <div class="social-links">
+              <a
+                class="social-link"
+                href="https://facebook.com"
+                title="Facebook"
+                aria-label="Follow us on Facebook"
+                >📘 Facebook</a
+              >
+              <a
+                class="social-link"
+                href="https://twitter.com"
+                title="Twitter"
+                aria-label="Follow us on Twitter"
+                >🐦 Twitter</a
+              >
+              <a
+                class="social-link"
+                href="https://instagram.com"
+                title="Instagram"
+                aria-label="Follow us on Instagram"
+                >📷 Instagram</a
+              >
+              <a
+                class="social-link"
+                href="https://linkedin.com"
+                title="LinkedIn"
+                aria-label="Follow us on LinkedIn"
+                >💼 LinkedIn</a
+              >
+            </div>
+          </div>
+        </div>
+        <hr class="footer-divider my-4" />
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="footer-copyright mb-0">
+              © 2023-2024 Company Name™. All rights reserved. Patent pending
+              #123,456,789 &amp; trademarks registered.
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p class="footer-tech mb-0 text-muted">
+              Powered by TinyHTML Parser v2.0 🚀 Built with ❤️ &amp;
+              cutting-edge technology
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    // Additional script for complex interactions
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-..."
+      crossorigin="anonymous"
+    ></script>
+    <script type="module">
+      // ES6 Module with complex imports and special characters
+      import { specialFunction } from './modules/special-chars.js';
+      import { unicodeHandler } from './modules/unicode-handler.js';
+      // Test module functionality
+      const testData = {
+      'string-with-dashes': 'value with "quotes" & symbols',
+      "double-quoted-key": "value with 'single quotes' inside",
+      `template-key`: `value with ${Date.now()} timestamp`,
+      specialChars: '!@#$%^&*()_+-={}[]|;\':",./<>?',
+      unicodeEmoji: '🎉🚀💻🔥⭐🌟✨💫🎯🎪🎨🎭🎪',
+      mathSymbols: '±×÷∞√∑∏∫∆≤≥≠≈∈∉⊂⊃∪∩',
+      currencies: '$€£¥₹₽₿¢₩₪₨₱₡₹'
+      };
+      console.log('Complex test data loaded:', testData);
+      // Dynamic import with error handling
+      try {
+      const dynamicModule = await import('./modules/dynamic-content.js');
+      dynamicModule.initialize(testData);
+      } catch (error) {
+      console.warn('Dynamic module failed to load:', error.message);
+      }
+    </script>
+  </body>
+</html>

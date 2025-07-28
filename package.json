@@ -1,0 +1,43 @@
+{
+  "name": "tinyhtml",
+  "version": "2.0.0",
+  "description": "A high-performance HTML template engine with concise syntax - Production optimized with 36% memory reduction and enterprise features",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "tinyhtml": "bin/cli.js"
+  },
+  "scripts": {
+    "build": "npm run build:ts && node bin/cli.js",
+    "build:ts": "tsc",
+    "dev": "npm run build:ts && node bin/cli.js --watch",
+    "watch": "npm run build:ts && node bin/cli.js --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "html",
+    "transpiler",
+    "parser",
+    "template",
+    "tinyhtml",
+    "tml"
+  ],
+  "author": "othman4dev",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "chokidar": "^3.5.0",
+    "commander": "^11.0.0",
+    "tinyhtml": "^0.0.72"
+  },
+  "files": [
+    "dist/",
+    "bin/",
+    "README.md"
+  ]
+}
